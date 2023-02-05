@@ -10,6 +10,12 @@ This repository contains history versions of NVIDIA vGPU drivers.
 | [12.4](https://github.com/justin-himself/NV-VGPU-Driver-Archive/releases/tag/12.4) | [13.4](https://github.com/justin-himself/NV-VGPU-Driver-Archive/releases/tag/13.4) | [14.4](https://github.com/justin-himself/NV-VGPU-Driver-Archive/releases/tag/14.4) |                                                              |
 |                                                              | [13.5](https://github.com/justin-himself/NV-VGPU-Driver-Archive/releases/tag/13.5) |                                                              |                                                              |
 |                                                              | [13.6](https://github.com/justin-himself/NV-VGPU-Driver-Archive/releases/tag/13.6) |                                                              |                                                              |
+
+## Download and Extract
+
+Because of the Github Release 2GB size limit, for some larger files I had to upload them in splitted zip volumes,
+So you need to download all `7z.00*` files to able to decompress.
+
 ## Preview
 
 To get you a rough idea of what each zip contains, here's the `tree` output of fully extracted 15.0 branch.  
