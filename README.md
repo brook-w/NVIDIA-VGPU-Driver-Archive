@@ -24,7 +24,15 @@ To get you a rough idea of what each zip contains, here's the `tree` output of f
 
 https://github.com/justin-himself/NV-VGPU-History-Driver/blob/master/preview.txt
 
-## About Windows Drivers
+## About Drivers
+
+> Which driver version I should choose?
+
+- Proxmox and most linux QEMU hypervisor: LINUX_KVM
+- Windows and hyperV: Windwos
+- ESXI (vSphere): vSphere
+
+> Windows Driver
 
 NVIDIA uses the same driver for both windows host and guest machines.
 
