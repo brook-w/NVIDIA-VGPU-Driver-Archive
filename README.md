@@ -2,7 +2,7 @@
 
 This repository contains history versions of NVIDIA vGPU drivers.  
 这个仓库包含了 NVIDIA vGPU 驱动的历史版本.
-| Tag       | #0                                                           | #1                                                           | #2                                                           | #3                                                           | #4                                                           | #5                                                           | #6                                                           |
+|        | #0                                                           | #1                                                           | #2                                                           | #3                                                           | #4                                                           | #5                                                           | #6                                                           |
 | --------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | **15.0+** | [15.0](https://github.com/justin-himself/NV-VGPU-Driver-Archive/releases/tag/15.0) | [15.1](https://github.com/justin-himself/NV-VGPU-Driver-Archive/releases/tag/15.1) |                                                              |                                                              |                                                              |                                                              |                                                              |
 | **14.0+** | [14.0](https://github.com/justin-himself/NV-VGPU-Driver-Archive/releases/tag/14.0) | [14.1](https://github.com/justin-himself/NV-VGPU-Driver-Archive/releases/tag/14.1) | [14.2](https://github.com/justin-himself/NV-VGPU-Driver-Archive/releases/tag/14.2) | [14.3](https://github.com/justin-himself/NV-VGPU-Driver-Archive/releases/tag/14.3) | [14.4](https://github.com/justin-himself/NV-VGPU-Driver-Archive/releases/tag/14.4) |                                                              |                                                              |
@@ -20,7 +20,7 @@ So you need to download all `7z.00*` files to able to decompress.
 
 ## Preview
 
-To get you a rough idea of what each zip contains, here's the `tree` output of fully extracted 15.0 branch.  
+To get you a rough idea of what each zip contains, here's the `tree` output of fully extracted 15.0 version.
 
 https://github.com/justin-himself/NV-VGPU-History-Driver/blob/master/preview.txt
 
