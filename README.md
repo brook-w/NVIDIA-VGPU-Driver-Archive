@@ -3,7 +3,7 @@
 This repository contains history versions of NVIDIA vGPU drivers.  
 这个仓库包含了 NVIDIA vGPU 驱动的历史版本.
 
-Every verision contains driver for all platforms. If you can't find what you are looking for, open an issue and I'll try to solve it.
+Every verision contains driver for all platforms. If you can't find what you are looking for, open an issue and I'll try to solve it.  
 每个版本包含了所有平台的驱动. 如果你找不到你想要的驱动, 开一个 issue, 我会尽量尝试解决.
 
 |           | #0                                                           | #1                                                           | #2                                                           | #3                                                           | #4                                                           | #5                                                           | #6                                                           | #7                                                           | #8                                                           | #9                                                           | #10                                                          | #11                                                          |
