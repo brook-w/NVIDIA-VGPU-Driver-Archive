@@ -23,6 +23,12 @@ Here's a [tutorial](https://justin.education/proxmox-nvidia-tesla-p4-vgpu-for-fr
 Because of the Github Release 2GB size limit, for some larger files I had to upload them in splitted zip volumes,
 So you need to download all `7z.00*` files to able to decompress.
 
+```bash
+sudo apt -y install p7zip-full
+7z x driver_name.7z.001
+```
+
+
 ## Preview
 
 To get you a rough idea of what each zip contains, here's the `tree` output of fully extracted 15.0 version.
