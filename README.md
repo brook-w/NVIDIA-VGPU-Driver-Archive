@@ -32,6 +32,9 @@ sudo apt -y install p7zip-full
 7z x driver_name.7z.001
 ```
 
+## Older versions
+
+Please feel free to open an issue if you need a driver older than 10.0. I will try to respond in time and provide you with assistance.
 
 ## Preview
 
