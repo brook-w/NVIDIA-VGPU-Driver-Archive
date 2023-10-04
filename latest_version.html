@@ -1,55 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-<body>
-  <div id="output"></div>
+    <head>
+          <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+              <style>
+    /* Style for the container */
+    body {
+              display: flex;
+                    justify-content: center;
+                          align-items: center;
+                                height: 100vh;
+                                      margin: 0;
+                                          }
 
-  <script>
-    // Function to extract and format version numbers
-    function extractVersionNumbers(text) {
-      const versionRegex = /\d+\.\d+/g;
-      const versions = text.match(versionRegex);
-      if (!versions) return null;
+        /* Style for the output box */
+        #output {
+                  font-size: 36px; /* Adjust the font size as needed */
+                        padding: 20px;
+                              border: 1px solid #ccc;
+                                    border-radius: 5px;
+                                          text-align: center;
+                                                background-color: #f5f5f5; /* Add a shaded background color */
+                                                      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add a box shadow */
+                                                          }
+          </style>
+    </head>
+    <body>
+          <div id="output"></div>
 
-      // Find and return the highest version number
-      return versions.reduce((highest, current) => {
-        const [currentMajor, currentMinor] = current.split('.').map(Number);
-        const [highestMajor, highestMinor] = highest.split('.').map(Number);
+            <script>
+                    // Function to extract and format version numbers
+                    function extractVersionNumbers(text) {
+                              const versionRegex = /\d+\.\d+/g;
+                              const versions = text.match(versionRegex);
+                              if (!versions) return null;
 
-        if (currentMajor > highestMajor || (currentMajor === highestMajor && currentMinor > highestMinor)) {
-          return current;
-        }
+                              // Find and return the highest version number
+                              return versions.reduce((highest, current) => {
+                                          const [currentMajor, currentMinor] = current.split('.').map(Number);
+                                          const [highestMajor, highestMinor] = highest.split('.').map(Number);
 
-        return highest;
-      });
-    }
+                                          if (currentMajor > highestMajor || (currentMajor === highestMajor && currentMinor > highestMinor)) {
+                                                        return current;
+                                                      }
 
-    // Function to fetch the webpage and extract version numbers
-    async function getVersionNumber() {
-      try {
-        const response = await fetch('https://corsproxy.io/?https://docs.nvidia.com/grid/latest/');
-        const html = await response.text();
+                                          return highest;
+                                        });
+                            }
 
-        // Extract version numbers from the HTML content
-        const version = extractVersionNumbers(html);
+                        // Function to fetch the webpage and extract version numbers
+                        async function getVersionNumber() {
+                                  try {
+                                              const response = await fetch('https://corsproxy.io/?https://docs.nvidia.com/grid/latest/');
+                                              const html = await response.text();
 
-        if (version) {
-          document.getElementById('output').textContent = version;
-        } else {
-          document.getElementById('output').textContent = 'No version numbers found on the page.';
-        }
-      } catch (error) {
-        console.error('An error occurred:', error);
-        document.getElementById('output').textContent = 'An error occurred while fetching the webpage.';
-      }
-    }
+                                              // Extract version numbers from the HTML content
+                                              const version = extractVersionNumbers(html);
 
-    // Call the getVersionNumber function to start the process
-    getVersionNumber();
-  </script>
-</body>
+                                              if (version) {
+                                                            document.getElementById('output').textContent = version;
+                                                          } else {
+                                                                        document.getElementById('output').textContent = 'No version numbers found on the page.';
+                                                                      }
+                                            } catch (error) {
+                                                        console.error('An error occurred:', error);
+                                                        document.getElementById('output').textContent = 'An error occurred while fetching the webpage.';
+                                                      }
+                                }
+
+                        // Call the getVersionNumber function to start the process
+                        getVersionNumber();
+                      </script>
+    </body>
 </html>
 
