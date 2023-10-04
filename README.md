@@ -1,7 +1,8 @@
 # NVIDIA-VGPU-Driver-Archive
 
-> Update:  
-> NVIDIA vGPU 16.0 adds support for linux kernel 6.x.
+| Current Newest Version |
+| --------------------- |
+| [Click to Check](https://htmlpreview.github.io/?https://github.com/justin-himself/NVIDIA-VGPU-Driver-Archive/blob/master/latest_version.html) |
 
 This repository contains history versions of NVIDIA vGPU drivers.  
 这个仓库包含了 NVIDIA vGPU 驱动的历史版本。
