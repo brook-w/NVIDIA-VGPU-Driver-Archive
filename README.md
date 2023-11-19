@@ -72,6 +72,9 @@ For example, if you search `527.41_grid_win10_win11_server2019_server2022_dch_64
 
 So if you are on a windows host, want to use the card directly, or you are passing through the whole card to a windows virtual machine, just use any windows driver in the branch.
 
-## Source
+## Copyright
 
 - NVIDIA Drivers - [NVIDIA Licensing - Software Downloads](https://ui.licensing.nvidia.com/software)
+
+This repository has been established with the primary intention of  archiving and facilitating easy downloads. Users are earnestly requested to refrain from engaging in any illegal activities and are expected to  adhere strictly to copyright laws. If there are any concerns or requests for the takedown of this repository, please communicate via email at [justin.zhang.ca@gmail.com](mailto:justin.zhang.ca@gmail.com). 
+
