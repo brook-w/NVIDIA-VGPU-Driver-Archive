@@ -31,6 +31,11 @@ I usually update the repository in a week after the official driver gets release
 | ------- | ---- | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | **3.*** |      | [3.1.0](https://github.com/justin-himself/NVIDIA-VGPU-Driver-Archive/releases/tag/dls3.1.1) | [3.1.1](https://github.com/justin-himself/NVIDIA-VGPU-Driver-Archive/releases/tag/dls3.1.1) |
 
+* [Legacy License Server 2023.04](https://github.com/justin-himself/NVIDIA-VGPU-Driver-Archive/releases/tag/ls2023.04)
+* [Legacy License Server 2022.09](https://github.com/justin-himself/NVIDIA-VGPU-Driver-Archive/releases/tag/ls2022.09)
+* [Legacy License Server 2022.02](https://github.com/justin-himself/NVIDIA-VGPU-Driver-Archive/releases/tag/ls2022.02)
+* [Legacy License Server 2021.07](https://github.com/justin-himself/NVIDIA-VGPU-Driver-Archive/releases/tag/ls2021.07)
+
 ## Misc
 
 * [vGPU Driver Catalog](https://raw.githubusercontent.com/justin-himself/NVIDIA-VGPU-Driver-Archive/master/vgpuDriverCatalog.yaml)
