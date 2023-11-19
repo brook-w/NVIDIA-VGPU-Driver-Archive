@@ -27,9 +27,14 @@ I usually update the repository in a week after the official driver gets release
 
 ## License Server
 
-|         | #0   | #1                                                           |
-| ------- | ---- | ------------------------------------------------------------ |
-| **3.*** |      | [3.1.0](https://github.com/justin-himself/NVIDIA-VGPU-Driver-Archive/releases/tag/nls3.1.1)<br />[3.1.1](https://github.com/justin-himself/NVIDIA-VGPU-Driver-Archive/releases/tag/nls3.1.1) |
+|         | #00  | #10                                                          | #11                                                          |
+| ------- | ---- | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| **3.*** |      | [3.1.0](https://github.com/justin-himself/NVIDIA-VGPU-Driver-Archive/releases/tag/dls3.1.1) | [3.1.1](https://github.com/justin-himself/NVIDIA-VGPU-Driver-Archive/releases/tag/dls3.1.1) |
+
+## Misc
+
+* [vGPU Driver Catalog](https://raw.githubusercontent.com/justin-himself/NVIDIA-VGPU-Driver-Archive/master/vgpuDriverCatalog.yaml)
+* [GPUMode Change Utility for Tesla M60 and M6 GPUs](https://github.com/justin-himself/NVIDIA-VGPU-Driver-Archive/releases/tag/gpumodeswitch2020)
 
 
 
@@ -74,4 +79,3 @@ So if you are on a windows host, want to use the card directly, or you are passi
 - NVIDIA Drivers - [NVIDIA Licensing - Software Downloads](https://ui.licensing.nvidia.com/software)
 
 This repository has been established with the primary intention of  archiving and facilitating easy downloads. Users are earnestly requested to refrain from engaging in any illegal activities and are expected to  adhere strictly to copyright laws. If there are any concerns or requests for the takedown of this repository, please communicate via email at [justin.zhang.ca@gmail.com](mailto:justin.zhang.ca@gmail.com). 
-
