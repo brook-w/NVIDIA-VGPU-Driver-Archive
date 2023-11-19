@@ -30,9 +30,9 @@ Here's a [tutorial](https://web.archive.org/web/*/https://justin.education/proxm
 
 ## License Server
 
-|           | #0                                                           | #1                                                           |
-| --------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| **3.1.*** | [3.1.0](https://github.com/justin-himself/NVIDIA-VGPU-Driver-Archive/releases/tag/nls3.1.1) | [3.1.1](https://github.com/justin-himself/NVIDIA-VGPU-Driver-Archive/releases/tag/nls3.1.1) |
+|         | #0   | #1                                                           |
+| ------- | ---- | ------------------------------------------------------------ |
+| **3.*** |      | [3.1.0](https://github.com/justin-himself/NVIDIA-VGPU-Driver-Archive/releases/tag/nls3.1.1)<br />[3.1.1](https://github.com/justin-himself/NVIDIA-VGPU-Driver-Archive/releases/tag/nls3.1.1) |
 
 
 
