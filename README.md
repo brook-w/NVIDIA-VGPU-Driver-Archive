@@ -25,11 +25,13 @@ I usually update the repository in a week after the official driver gets release
 | **11.0+** | [11.0](https://github.com/justin-himself/NV-VGPU-Driver-Archive/releases/tag/11.0) | [11.1](https://github.com/justin-himself/NV-VGPU-Driver-Archive/releases/tag/11.1) | [11.2](https://github.com/justin-himself/NV-VGPU-Driver-Archive/releases/tag/11.2) | [11.3](https://github.com/justin-himself/NV-VGPU-Driver-Archive/releases/tag/11.3) | [11.4](https://github.com/justin-himself/NV-VGPU-Driver-Archive/releases/tag/11.4) | [11.5](https://github.com/justin-himself/NV-VGPU-Driver-Archive/releases/tag/11.5) | [11.6](https://github.com/justin-himself/NV-VGPU-Driver-Archive/releases/tag/11.6) | [11.7](https://github.com/justin-himself/NV-VGPU-Driver-Archive/releases/tag/11.7) | [11.8](https://github.com/justin-himself/NV-VGPU-Driver-Archive/releases/tag/11.8) | [11.9](https://github.com/justin-himself/NV-VGPU-Driver-Archive/releases/tag/11.9) | [11.10](https://github.com/justin-himself/NV-VGPU-Driver-Archive/releases/tag/11.10) | [11.11](https://github.com/justin-himself/NV-VGPU-Driver-Archive/releases/tag/11.11) |
 | **10.0+** | [10.0](https://github.com/justin-himself/NV-VGPU-Driver-Archive/releases/tag/10.0) | [10.1](https://github.com/justin-himself/NV-VGPU-Driver-Archive/releases/tag/10.1) | [10.2](https://github.com/justin-himself/NV-VGPU-Driver-Archive/releases/tag/10.2) | [10.3](https://github.com/justin-himself/NV-VGPU-Driver-Archive/releases/tag/10.3) | [10.4](https://github.com/justin-himself/NV-VGPU-Driver-Archive/releases/tag/10.4) |                                                              |                                                              |                                                              |                                                              |                                                              |                                                              |                                                              |
 
-## License Server
+## NLS (DLS)
 
 |         | #00  | #10                                                          | #11                                                          |
 | ------- | ---- | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | **3.*** |      | [3.1.0](https://github.com/justin-himself/NVIDIA-VGPU-Driver-Archive/releases/tag/dls3.1.1) | [3.1.1](https://github.com/justin-himself/NVIDIA-VGPU-Driver-Archive/releases/tag/dls3.1.1) |
+
+## vGPU License Manager
 
 * [Legacy License Server 2023.04](https://github.com/justin-himself/NVIDIA-VGPU-Driver-Archive/releases/tag/ls2023.04)
 * [Legacy License Server 2022.09](https://github.com/justin-himself/NVIDIA-VGPU-Driver-Archive/releases/tag/ls2022.09)
