@@ -13,9 +13,6 @@ I usually update the repository in a week after the official driver gets release
 | ------------------------------------------------------------ |
 | [Click to Check](https://htmlpreview.github.io/?https://github.com/justin-himself/NVIDIA-VGPU-Driver-Archive/blob/master/latest_version.html) |
 
-Here's a [tutorial](https://web.archive.org/web/*/https://justin.education/proxmox-nvidia-tesla-p4-vgpu-for-free/) in Chinese featuring vGPU solution on a proxmox server with Tesla P4 card. Please don't open issues unrelated to vGPU drivers provided in this repository and consider seeking help in [vGPU unlock](https://github.com/DualCoder/vgpu_unlock)  
-[这](https://web.archive.org/web/*/https://justin.education/proxmox-nvidia-tesla-p4-vgpu-for-free/)是一个关于在 Proxmox 上使用 Tesla P4 的教程。本仓库只负责提供 vGPU 驱动，关于 vGPU unlock 的问题请移步 [vGPU unlock](https://github.com/DualCoder/vgpu_unlock)。
-
 ## vGPU Driver
 
 |           | #0                                                           | #1                                                           | #2                                                           | #3                                                           | #4                                                           | #5                                                           | #6                                                           | #7                                                           | #8                                                           | #9                                                           | #10                                                          | #11                                                          |
