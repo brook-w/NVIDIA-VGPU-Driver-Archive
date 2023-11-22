@@ -1,7 +1,7 @@
-# name: clone vgpu driver
-# on:
-#   push:
-#     branches: [ "master" ]
+name: clone vgpu driver
+on:
+  push:
+    branches: [ "master" ]
 # jobs:
 #   setup-build-publish-deploy:
 #     name: Setup
@@ -13,18 +13,11 @@
 #         tag: "16.2"
 #         fileName: "NVIDIA-GRID-Linux-KVM-535.129.03-537.70.zip"
 
+# jobs:
+#   build:
+#     runs-on: ubuntu-latest
 
-
-name: Download and Push to Release
-on:
-  push:
-    branches:
-      - master  # 触发工作流程的分支，可以根据你的需求进行修改
-jobs:
-  build:
-    runs-on: ubuntu-latest
-
-    steps:
+#     steps:
     # - name: Checkout
     #   uses: actions/checkout@v3
 
@@ -51,14 +44,61 @@ jobs:
     #   env:
     #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-    - name: Checkout
+
+jobs:
+  upload:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repository
       uses: actions/checkout@v3
-    - name: Build
-      run: echo ${{ github.sha }} > Release.txt
-    - name: Test
-      run: cat Release.txt
-    - name: Release
-      uses: softprops/action-gh-release@v1
-      if: startsWith(github.ref, 'refs/tags/')
-      with:
-        files: Release.txt
+
+    - name: Download File
+      run: |
+        wget -O wget.zip http://ftp.gnu.org/gnu/wget/wget-1.5.3.tar.gz
+
+    - name: Upload File to Release
+      run: |
+        echo ${{ secrets.GITHUB_TOKEN }}
+        echo ${{GITHUB_REPOSITORY}}
+
+        LEASE_ID=$(curl -s -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+                  "https://api.github.com/repos/${GITHUB_REPOSITORY}/releases/tags/${TAG_NAME}" | jq -r .id)
+        echo ${LEASE_ID}
+        # git config --global user.email "1285837374@qq.com"
+        # git config --global user.name "brook-w"
+        # git checkout -b release
+        # git add wget.zip
+        # git commit -m "Add wget.zip to release branch"
+        # git push -f origin release
+        # FILE_PATH="path/to/your/file"
+        # TAG_NAME=release1 
+        # RELEASE_ID=$(curl -s -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+        #   "https://api.github.com/repos/${GITHUB_REPOSITORY}/releases/tags/${TAG_NAME}" | jq -r .id)
+        
+        # if [ -z "$RELEASE_ID" ]; then
+        #   echo "Release not found for tag $TAG_NAME"
+        #   exit 1
+        # fi
+
+        # upload_url=$(curl -s -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+        #   "https://api.github.com/repos/${GITHUB_REPOSITORY}/releases/$RELEASE_ID" | jq -r .upload_url)
+        # upload_url="${upload_url/\{?name,label\}/?name=$(basename "$FILE_PATH")}"
+
+        # curl -s -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+        #   -H "Content-Type: application/octet-stream" --data-binary "@$FILE_PATH" "$upload_url"
+
+    # env:
+    #   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+    # - name: Checkout
+    #   uses: actions/checkout@v3
+    # - name: Build
+    #   run: echo ${{ github.sha }} > Release.txt
+    # - name: Test
+    #   run: cat Release.txt
+    # - name: Release
+    #   uses: softprops/action-gh-release@v1
+    #   if: startsWith(github.ref, 'refs/tags/')
+    #   with:
+    #     files: Release.txt
