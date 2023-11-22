@@ -29,34 +29,14 @@ jobs:
 
     - name: Upload File to Release
       run: |
-        echo ${{ secrets.GITHUB_TOKEN }}
-        echo ${GITHUB_REPOSITORY}
-
-        LEASE_ID=$(curl -s -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
-                  "https://api.github.com/repos/${GITHUB_REPOSITORY}/releases/tags/${TAG_NAME}" | jq -r .id)
-        echo ${LEASE_ID}
-        # git config --global user.email "1285837374@qq.com"
-        # git config --global user.name "brook-w"
-        # git checkout -b release
-        # git add wget.zip
-        # git commit -m "Add wget.zip to release branch"
-        # git push -f origin release
-        # FILE_PATH="path/to/your/file"
-        # TAG_NAME=release1 
-        # RELEASE_ID=$(curl -s -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
-        #   "https://api.github.com/repos/${GITHUB_REPOSITORY}/releases/tags/${TAG_NAME}" | jq -r .id)
-        
-        # if [ -z "$RELEASE_ID" ]; then
-        #   echo "Release not found for tag $TAG_NAME"
-        #   exit 1
-        # fi
-
-        # upload_url=$(curl -s -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
-        #   "https://api.github.com/repos/${GITHUB_REPOSITORY}/releases/$RELEASE_ID" | jq -r .upload_url)
-        # upload_url="${upload_url/\{?name,label\}/?name=$(basename "$FILE_PATH")}"
-
-        # curl -s -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
-        #   -H "Content-Type: application/octet-stream" --data-binary "@$FILE_PATH" "$upload_url"
+        FILE_PATH="wget.zip"
+        TAG_NAME=release1 
+        upload_url=$(curl -s -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+          "https://api.github.com/repos/${GITHUB_REPOSITORY}/releases/$RELEASE_ID" | jq -r .upload_url)
+        upload_url="${upload_url/\{?name,label\}/?name=$(basename "$FILE_PATH")}"
+        echo $upload_url
+        curl -s -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+           -H "Content-Type: application/octet-stream" --data-binary "@$FILE_PATH" "$upload_url"
 
     # env:
     #   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
