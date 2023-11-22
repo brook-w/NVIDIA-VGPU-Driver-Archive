@@ -12,38 +12,8 @@ on:
 #         repository: "justin-himself/NVIDIA-VGPU-Driver-Archive"
 #         tag: "16.2"
 #         fileName: "NVIDIA-GRID-Linux-KVM-535.129.03-537.70.zip"
-
-# jobs:
-#   build:
-#     runs-on: ubuntu-latest
-
-#     steps:
-    # - name: Checkout
-    #   uses: actions/checkout@v3
-
-    # - name: Download File
-    #   run: |
-    #     wget -O wget.zip http://ftp.gnu.org/gnu/wget/wget-1.5.3.tar.gz
-        
-    # - name: Commit and Push to Release Branch
-    #   run: |
-    #     echo ${{ secrets.GITHUB_TOKEN }}
-    #     git config --global user.email "1285837374@qq.com"
-    #     git config --global user.name "brook-w"
-    #     git checkout -b release
-    #     git add wget.zip
-    #     git commit -m "Add wget.zip to release branch"
-    #     git push -f origin release
-
-    # - name: Create Release
-    #   id: create_release
-    #   uses: softprops/action-gh-release@v1
-    #   with:
-    #     files: wget.zip
-    #     tag: release
-    #   env:
-    #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
+env:
+  GITHUB_REPOSITORY: brook-w/NVIDIA-VGPU-Driver-Archive
 
 jobs:
   upload:
@@ -60,7 +30,7 @@ jobs:
     - name: Upload File to Release
       run: |
         echo ${{ secrets.GITHUB_TOKEN }}
-        echo ${{GITHUB_REPOSITORY}}
+        echo ${GITHUB_REPOSITORY}
 
         LEASE_ID=$(curl -s -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
                   "https://api.github.com/repos/${GITHUB_REPOSITORY}/releases/tags/${TAG_NAME}" | jq -r .id)
