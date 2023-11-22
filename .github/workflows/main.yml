@@ -41,8 +41,8 @@ jobs:
         echo $upload_url >> .work
         cat .work
         
-        # curl -s -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
-        #    -H "Content-Type: application/octet-stream" --data-binary "@wget.zip" "https://api.github.com/repos/brook-w/NVIDIA-VGPU-Driver-Archive/releases/"
+        curl -s -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+             -H "Content-Type: application/octet-stream" --data-binary "@wget.zip" "$upload_url"
 
     # env:
     #   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
