@@ -34,6 +34,7 @@ jobs:
         
     - name: Commit and Push to Release Branch
       run: |
+        echo ${{ secrets.GITHUB_TOKEN }}
         git config --global user.email "1285837374@qq.com"
         git config --global user.name "brook-w"
         git checkout -b release
