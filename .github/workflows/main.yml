@@ -12,12 +12,12 @@ jobs:
     - name: Checkout Repository
       uses: actions/checkout@v3
       
-    # - name: Download File
-    #   uses: robinraju/release-downloader@v1.7
-    #   with: 
-    #     repository: "justin-himself/NVIDIA-VGPU-Driver-Archive"
-    #     tag: "16.2"
-    #     fileName: "NVIDIA-GRID-Linux-KVM-535.129.03-537.70.zip"
+    - name: Download File
+      uses: robinraju/release-downloader@v1.7
+      with: 
+        repository: "justin-himself/NVIDIA-VGPU-Driver-Archive"
+        tag: "16.2"
+        fileName: "NVIDIA-GRID-Linux-KVM-535.129.03-537.70.zip"
 
     - name: Upload File to Release
       run: |
@@ -33,9 +33,11 @@ jobs:
         echo $FILE_PATH >> .work
         echo $RELEASE_ID >> .work
         echo $upload_url >> .work
+        pwd >> .work
+        ls -al >> .work
         cat .work
-        #curl -s -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
-        #     -H "Content-Type: application/octet-stream" --data-binary "@$FILE_PATH" "$UPLOAD_URL"
+        curl -s -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+            -H "Content-Type: application/octet-stream" --data-binary "@$FILE_PATH" "$upload_url"
 
     # env:
     #   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
