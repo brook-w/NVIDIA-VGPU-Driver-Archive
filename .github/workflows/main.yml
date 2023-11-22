@@ -34,6 +34,8 @@ jobs:
         
     - name: Commit and Push to Release Branch
       run: |
+        git config --global user.email "1285837374@qq.com"
+        git config --global user.name "brook-w"
         git checkout -b release
         git add wget.zip
         git commit -m "Add wget.zip to release branch"
