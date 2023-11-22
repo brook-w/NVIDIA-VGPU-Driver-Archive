@@ -1,5 +1,17 @@
-- uses: robinraju/release-downloader@v1.7
-  with: 
-    repository: "justin-himself/NVIDIA-VGPU-Driver-Archive"
-    tag: "16.2"
-    fileName: "NVIDIA-GRID-Linux-KVM-535.129.03-537.70.zip"
+name: clone vgpu driver
+on:
+  push:
+    branches: [ "master" ]
+jobs:
+  setup-build-publish-deploy:
+    name: Setup
+    runs-on: ubuntu-latest
+    steps:
+    - uses: robinraju/release-downloader@v1.7
+      with: 
+        repository: "justin-himself/NVIDIA-VGPU-Driver-Archive"
+        tag: "16.2"
+        fileName: "NVIDIA-GRID-Linux-KVM-535.129.03-537.70.zip"
+
+
+
