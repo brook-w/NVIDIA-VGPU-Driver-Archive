@@ -39,6 +39,7 @@ jobs:
         git checkout -b release
         git add wget.zip
         git commit -m "Add wget.zip to release branch"
+        git pull
         git push origin release
 
     - name: Create Release
