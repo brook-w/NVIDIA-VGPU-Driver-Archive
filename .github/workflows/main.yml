@@ -25,9 +25,9 @@ jobs:
         TAG_NAME='release1'
         RELEASE_ID=$(curl -s -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
           "https://api.github.com/repos/${GITHUB_REPOSITORY}/releases/tags/${TAG_NAME}" | jq -r .id)
-        # UPLOAD_URL=$(curl -s -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
-        #   "https://api.github.com/repos/${GITHUB_REPOSITORY}/releases/$RELEASE_ID" | jq -r .upload_url)
-        # UPLOAD_URL="${upload_url/\{?name,label\}/?name=$(basename "$FILE_PATH")}
+        UPLOAD_URL=$(curl -s -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+          "https://api.github.com/repos/${GITHUB_REPOSITORY}/releases/$RELEASE_ID" | jq -r .upload_url)
+        UPLOAD_URL="${upload_url/\{?name,label\}/?name=$(basename "$FILE_PATH")}
         touch .work
         ls -al >> .work
         echo $FILE_PATH >> .work
