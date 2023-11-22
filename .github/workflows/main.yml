@@ -27,11 +27,12 @@ jobs:
           "https://api.github.com/repos/${GITHUB_REPOSITORY}/releases/tags/${TAG_NAME}" | jq -r .id)
         upload_url=$(curl -s -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
           "https://api.github.com/repos/${GITHUB_REPOSITORY}/releases/$RELEASE_ID" | jq -r .upload_url)
-        upload_url="${upload_url/\{?name,label\}/?name=$(basename "$FILE_PATH")}
+        #upload_url="${upload_url/\{?name,label\}/?name=$(basename "$FILE_PATH")}
         touch .work
         ls -al >> .work
         echo $FILE_PATH >> .work
         echo $RELEASE_ID >> .work
+        echo $upload_url >> .work
         cat .work
         #curl -s -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
         #     -H "Content-Type: application/octet-stream" --data-binary "@$FILE_PATH" "$UPLOAD_URL"
