@@ -12,12 +12,12 @@ jobs:
     - name: Checkout Repository
       uses: actions/checkout@v3
       
-    - name: Download File
-      uses: robinraju/release-downloader@v1.7
-      with: 
-        repository: "justin-himself/NVIDIA-VGPU-Driver-Archive"
-        tag: "16.2"
-        fileName: "NVIDIA-GRID-Linux-KVM-535.129.03-537.70.zip"
+    # - name: Download File
+    #   uses: robinraju/release-downloader@v1.7
+    #   with: 
+    #     repository: "justin-himself/NVIDIA-VGPU-Driver-Archive"
+    #     tag: "16.2"
+    #     fileName: "NVIDIA-GRID-Linux-KVM-535.129.03-537.70.zip"
 
     - name: Upload File to Release
       run: |
@@ -25,9 +25,9 @@ jobs:
         TAG_NAME='release1'
         RELEASE_ID=$(curl -s -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
           "https://api.github.com/repos/${GITHUB_REPOSITORY}/releases/tags/${TAG_NAME}" | jq -r .id)
-        UPLOAD_URL=$(curl -s -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
-          "https://api.github.com/repos/${GITHUB_REPOSITORY}/releases/$RELEASE_ID" | jq -r .upload_url)
-        UPLOAD_URL="${upload_url/\{?name,label\}/?name=$(basename "$FILE_PATH")}
+        # UPLOAD_URL=$(curl -s -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+        #   "https://api.github.com/repos/${GITHUB_REPOSITORY}/releases/$RELEASE_ID" | jq -r .upload_url)
+        # UPLOAD_URL="${upload_url/\{?name,label\}/?name=$(basename "$FILE_PATH")}
         touch .work
         ls -al >> .work
         echo $FILE_PATH >> .work
